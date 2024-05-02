@@ -9,7 +9,7 @@
 ✅[View demo](https://ph0enix46.github.io/Bankist-App---JAVASCRIPT/) 🐛[Bug report](https://github.com/pH0enix46/Bankist-App---JAVASCRIPT/issues)
 
 ## About
-It's a Bankist-App based on JAVASCRIPT with a beautiful UI. It is a project of Jonas Schmedtmann's course. I am doing all the code manually and changing the UI myself. please check the code 
+It's a Bankist-App based on JAVASCRIPT with a beautiful UI. It is a project of Jonas Schmedtmann's course. I am doing all the code manually and changing some UI myself. please check the code 
 <br/>
 ✅✅✅ user 1 : mj and pass: 1111
 <br/>
