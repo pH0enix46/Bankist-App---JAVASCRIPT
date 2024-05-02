@@ -11,9 +11,9 @@
 ## About
 It's a Bankist-App based on JAVASCRIPT with a beautiful UI. It is a project of Jonas Schmedtmann's course. I am doing all the code manually and changing some UI myself. please check the code 
 <br/>
-✅✅✅ user 1 : mj and pass: 1111
+✅✅✅ user 1: mj and pass: 1111
 <br/>
-✅✅✅ user 2 : ar and pass: 2222
+✅✅✅ user 2: ar and pass: 2222
 
 ### Screenshots
 ![Bankist-App](bankist-demo-pic.png)
