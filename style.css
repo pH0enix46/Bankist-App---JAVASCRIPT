@@ -1,0 +1,366 @@
+/*
+ * Use this CSS to learn some intersting techniques,
+ * in case you're wondering how I built the UI.
+ * Have fun! 😁
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #444;
+  /* height: 100vh; */
+  padding: 2rem;
+  background: linear-gradient(
+    109.6deg,
+    rgba(109, 171, 161, 0.95) 11.2%,
+    rgba(181, 116, 190, 0.95) 53.7%,
+    rgba(208, 118, 118, 0.95) 100.2%
+  );
+}
+
+/* NAV✅✅✅ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.welcome {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: rgba(2, 47, 129, 0.8);
+  text-transform: uppercase;
+  font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.logo {
+  height: 7rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 2px solid rgba(4, 47, 131, 0.6);
+  transition: all 0.2s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 2px solid rgba(2, 113, 17, 0.6);
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.4rem;
+  color: rgba(6, 26, 202, 0.8);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #555;
+}
+/* ⛔⛔⛔ */
+
+/* MAIN✅✅✅ */
+.app {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+  border: 2.4px solid rgba(215, 228, 252, 0.4);
+  padding: 0.6rem;
+  border-radius: 1.5rem;
+
+  /* NOTE This creates the fade in/out animation */
+  opacity: 0;
+  transition: all 1s;
+}
+
+.balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.balance__label {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Rubik Moonrocks", sans-serif;
+  color: #333;
+}
+
+.balance__date {
+  font-size: 1.6rem;
+}
+
+.balance__value {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+/* MOVEMENTS */
+.movements {
+  grid-row: 2 / span 3;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 1.5rem;
+  overflow: scroll;
+}
+
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.8);
+}
+
+.movements__type {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(230, 221, 221, 0.8);
+  padding: 0.1rem 1rem;
+  border-radius: 15rem;
+  margin-right: 2rem;
+  padding: 0.6rem;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.movements__date {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+
+.movements__type--deposit {
+  background-image: linear-gradient(
+    to left,
+    rgba(9, 145, 65, 0.8),
+    rgba(87, 132, 224, 0.8)
+  );
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(
+    to top left,
+    rgba(149, 4, 146, 0.8),
+    rgba(156, 16, 23, 0.8)
+  );
+}
+
+.movements__value {
+  font-size: 1.8rem;
+  margin-left: auto;
+  color: #666;
+}
+
+/* SUMMARY */
+.summary {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  margin-top: 1rem;
+  border: 2px solid rgba(236, 181, 181, 0.4);
+  border-radius: 1.5rem;
+}
+
+.summary__label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 1.8rem;
+  margin-right: 2.5rem;
+}
+
+.summary__value--in,
+.summary__value--interest {
+  color: rgba(104, 201, 117, 0.8);
+}
+
+.summary__value--out {
+  color: rgba(147, 12, 12, 0.6);
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(68, 68, 68, 0.8);
+  padding: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn--sort:hover {
+  color: rgba(85, 85, 85, 0.8);
+}
+
+/* OPERATIONS */
+.operation {
+  border-radius: 1.5rem;
+  padding: 3rem 4rem;
+  /* color: #666; */
+  border: 2px solid rgba(238, 238, 238, 0.6);
+}
+
+.operation--transfer {
+  background-image: linear-gradient(
+    to top left,
+    rgba(255, 175, 3, 0.6),
+    rgba(255, 205, 3, 0.6)
+  );
+}
+
+.operation--loan {
+  background-image: linear-gradient(
+    to top left,
+    rgba(57, 179, 132, 0.6),
+    rgba(154, 225, 93, 0.6)
+  );
+}
+
+.operation--close {
+  background-image: linear-gradient(
+    to top left,
+    rgba(229, 42, 89, 0.6),
+    rgba(255, 88, 96, 0.6)
+  );
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+/* Exceptions for interst */
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan {
+  grid-row: 2;
+}
+/* End exceptions */
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.6rem;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgba(68, 68, 68, 0.8);
+  font-weight: 500;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(216, 216, 216, 0.8);
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.timer {
+  font-weight: 800;
+}
+/* ⛔⛔⛔ */
+
+footer p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgba(68, 68, 68, 0.8);
+  font-weight: 600;
+}
+
+.github:link,
+.github:visited {
+  font-size: 2rem;
+  color: rgba(3, 97, 144, 0.4);
+}
