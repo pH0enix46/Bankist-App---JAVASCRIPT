@@ -11,3 +11,24 @@
 ## About
 It's a Bankist-App based on JAVASCRIPT with a beautiful UI. It is a project of Jonas Schmedtmann's course. I am doing all the code manually and changing the UI myself. please check the code
 
+### Screenshots
+![Bankist-App](bankist-demo-pic.png)
+
+## Installation
+
+Clone the repo
+```
+https://github.com/pH0enix46/Bankist-App---JAVASCRIPT.git
+```
+
+✅Enjoy! for learning 
+
+❌But don't copy mine
+## Acknowledgments
+My lovely teacher [Jonas Schmedtmann](https://github.com/jonasschmedtmann)
+
+
+```
+Have a nice Day!😸
+```
+
